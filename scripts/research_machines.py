@@ -126,35 +126,58 @@ def validate_machine(data: dict[str, Any], expected: dict[str, Any]) -> list[str
 
 
 def search_web(query: str, max_results: int = 8) -> list[str]:
-    """Find public source URLs without using paid Gemini Search grounding."""
-    url = "https://html.duckduckgo.com/html/?q=" + quote_plus(query)
-    request = Request(
-        url,
-        headers={
-            "User-Agent": "Mozilla/5.0 (compatible; MachineResearchBot/1.0)",
-            "Accept": "text/html",
-        },
-    )
-    try:
-        with urlopen(request, timeout=20) as response:
-            page = response.read().decode("utf-8", errors="ignore")
-    except Exception as exc:
-        print(f"Websuche fehlgeschlagen: {exc}", file=sys.stderr, flush=True)
-        return []
+    """Find public source URLs without using Gemini Search grounding."""
+    endpoints = [
+        "https://lite.duckduckgo.com/lite/?q=",
+        "https://html.duckduckgo.com/html/?q=",
+    ]
 
-    urls: list[str] = []
-    for match in re.finditer(r'<a[^>]+class="[^"]*result__a[^"]*"[^>]+href="([^"]+)"', page):
-        href = html.unescape(match.group(1))
-        parsed = urlparse(href)
-        if "duckduckgo.com" in parsed.netloc and parsed.path.startswith("/l/"):
-            target = parse_qs(parsed.query).get("uddg", [None])[0]
-            href = unquote(target) if target else href
-        if href.startswith(("http://", "https://")) and href not in urls:
-            urls.append(href)
-        if len(urls) >= max_results:
-            break
-    return urls
+    for endpoint in endpoints:
+        url = endpoint + quote_plus(query)
+        request = Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/131.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml",
+            },
+        )
+        try:
+            with urlopen(request, timeout=20) as response:
+                page = response.read().decode("utf-8", errors="ignore")
+        except Exception as exc:
+            print(f"Websuche fehlgeschlagen ({endpoint}): {exc}", file=sys.stderr, flush=True)
+            continue
 
+        urls: list[str] = []
+        # DDG changes attribute order between its HTML endpoints. Extract the
+        # whole result anchor first, then read href independently of attribute order.
+        anchors = re.findall(
+            r"<a\\b[^>]*class=[\\"'][^\\"']*(?:result__a|result-link)[^\\"']*[\\"'][^>]*>.*?</a>",
+            page,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        for anchor in anchors:
+            href_match = re.search(r"href=[\\"']([^\\"']+)[\\"']", anchor, flags=re.IGNORECASE)
+            if not href_match:
+                continue
+            href = html.unescape(href_match.group(1))
+            parsed = urlparse(href)
+            if "duckduckgo.com" in parsed.netloc and parsed.path.startswith("/l/"):
+                target = parse_qs(parsed.query).get("uddg", [None])[0]
+                href = unquote(target) if target else href
+            if href.startswith(("http://", "https://")) and href not in urls:
+                urls.append(href)
+            if len(urls) >= max_results:
+                break
+
+        if urls:
+            print(f"Websuche: {len(urls)} Quellen gefunden.", flush=True)
+            return urls
+
+        print(f"Websuche: 0 Treffer über {endpoint}", file=sys.stderr, flush=True)
+
+    return []
 
 def source_urls_for(machine: dict[str, Any]) -> list[str]:
     queries = [
