@@ -153,12 +153,14 @@ def search_web(query: str, max_results: int = 8) -> list[str]:
         # DDG changes attribute order between its HTML endpoints. Extract the
         # whole result anchor first, then read href independently of attribute order.
         anchors = re.findall(
-            r"<a\\b[^>]*class=[\\"'][^\\"']*(?:result__a|result-link)[^\\"']*[\\"'][^>]*>.*?</a>",
+            r"<a[^>]*>.*?</a>",
             page,
             flags=re.IGNORECASE | re.DOTALL,
         )
         for anchor in anchors:
-            href_match = re.search(r"href=[\\"']([^\\"']+)[\\"']", anchor, flags=re.IGNORECASE)
+            if "result__a" not in anchor and "result-link" not in anchor:
+                continue
+            href_match = re.search('href="([^"]+)"', anchor, flags=re.IGNORECASE)
             if not href_match:
                 continue
             href = html.unescape(href_match.group(1))
