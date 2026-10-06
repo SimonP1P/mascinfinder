@@ -59,7 +59,9 @@ jobs:
         run: |
           git config user.name "machine-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add machines_backlog.json maschinendaten/
+          mkdir -p maschinendaten
+          git add machines_backlog.json
+          git add -A maschinendaten/
           if git diff --cached --quiet; then
             echo "Keine Änderungen."
             exit 0
