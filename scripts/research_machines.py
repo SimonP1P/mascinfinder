@@ -46,7 +46,13 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def select_open_machines(backlog: dict[str, Any], batch_size: int) -> list[dict[str, Any]]:
+def select_research_machines(backlog: dict[str, Any], batch_size: int) -> list[dict[str, Any]]:
+    # Recover jobs left in researching by an interrupted previous run.
+    # Workflow concurrency prevents overlapping research runs.
+    for machine in backlog["machines"]:
+        if machine["status"] == "researching":
+            machine["status"] = "open"
+
     jobs = [m for m in backlog["machines"] if m["status"] == "open"]
     return jobs[:batch_size]
 
@@ -221,7 +227,7 @@ def main() -> int:
         return 2
 
     backlog = load_json(BACKLOG_PATH)
-    jobs = select_open_machines(backlog, args.batch_size)
+    jobs = select_research_machines(backlog, args.batch_size)
 
     if not jobs:
         print("Keine offenen Maschinen mehr.")
