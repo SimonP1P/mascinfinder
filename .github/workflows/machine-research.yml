@@ -16,7 +16,7 @@ on:
       model:
         description: "Gemini-Modell"
         required: false
-        default: "gemini-2.5-flash-lite"
+        default: "gemini-3.5-flash-lite"
         type: string
   schedule:
     - cron: "17 */2 * * *"
@@ -36,7 +36,7 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       RESEARCH_BATCH_SIZE: ${{ inputs.batch_size || '12' }}
       RESEARCH_WORKERS: ${{ inputs.workers || '6' }}
-      GEMINI_MODEL: ${{ inputs.model || 'gemini-2.5-flash-lite' }}
+      GEMINI_MODEL: ${{ inputs.model || 'gemini-3.5-flash-lite' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -68,3 +68,7 @@ jobs:
           fi
           git commit -m "research: update machine data"
           git push
+
+      - name: Fail workflow if research workers failed
+        if: always() && steps.research.outcome == 'failure'
+        run: exit 1
