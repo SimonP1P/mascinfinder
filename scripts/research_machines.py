@@ -8,6 +8,10 @@ import json
 import os
 import sys
 import time
+import html
+import re
+from urllib.parse import parse_qs, quote_plus, unquote, urlparse
+from urllib.request import Request, urlopen
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,7 +26,7 @@ BACKLOG_PATH = ROOT / "machines_backlog.json"
 MACHINE_SCHEMA_PATH = ROOT / "machine.schema.json"
 AGENT_PATH = ROOT / "AGENT_RESEARCHER.md"
 
-DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 DEFAULT_BATCH_SIZE = int(os.getenv("RESEARCH_BATCH_SIZE", "12"))
 DEFAULT_WORKERS = int(os.getenv("RESEARCH_WORKERS", "6"))
 MAX_RETRIES = 4
@@ -53,7 +57,7 @@ def select_research_machines(backlog: dict[str, Any], batch_size: int) -> list[d
         if machine["status"] == "researching":
             machine["status"] = "open"
 
-    jobs = [m for m in backlog["machines"] if m["status"] == "open"]
+    jobs = [m for m in backlog["machines"] if m["status"] in {"failed", "open"}]
     return jobs[:batch_size]
 
 
@@ -120,6 +124,52 @@ def validate_machine(data: dict[str, Any], expected: dict[str, Any]) -> list[str
     return errors
 
 
+
+def search_web(query: str, max_results: int = 8) -> list[str]:
+    """Find public source URLs without using paid Gemini Search grounding."""
+    url = "https://html.duckduckgo.com/html/?q=" + quote_plus(query)
+    request = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; MachineResearchBot/1.0)",
+            "Accept": "text/html",
+        },
+    )
+    try:
+        with urlopen(request, timeout=20) as response:
+            page = response.read().decode("utf-8", errors="ignore")
+    except Exception as exc:
+        print(f"Websuche fehlgeschlagen: {exc}", file=sys.stderr, flush=True)
+        return []
+
+    urls: list[str] = []
+    for match in re.finditer(r'<a[^>]+class="[^"]*result__a[^"]*"[^>]+href="([^"]+)"', page):
+        href = html.unescape(match.group(1))
+        parsed = urlparse(href)
+        if "duckduckgo.com" in parsed.netloc and parsed.path.startswith("/l/"):
+            target = parse_qs(parsed.query).get("uddg", [None])[0]
+            href = unquote(target) if target else href
+        if href.startswith(("http://", "https://")) and href not in urls:
+            urls.append(href)
+        if len(urls) >= max_results:
+            break
+    return urls
+
+
+def source_urls_for(machine: dict[str, Any]) -> list[str]:
+    queries = [
+        f'"{machine["manufacturer"]}" "{machine["model"]}" "{machine["variant"] or ""}"',
+        f'"{machine["manufacturer"]}" "{machine["model"]}" datasheet manual',
+    ]
+    urls: list[str] = []
+    for query in queries:
+        for url in search_web(query):
+            if url not in urls:
+                urls.append(url)
+            if len(urls) >= 10:
+                return urls
+    return urls
+
 def grounding_urls(response: Any) -> list[str]:
     urls: list[str] = []
     try:
@@ -134,7 +184,7 @@ def grounding_urls(response: Any) -> list[str]:
     return urls
 
 
-def build_prompt(machine: dict[str, Any], existing: dict[str, Any] | None, instructions: str) -> str:
+def build_prompt(machine: dict[str, Any], existing: dict[str, Any] | None, instructions: str, research_urls: list[str]) -> str:
     existing_text = json.dumps(existing, ensure_ascii=False, indent=2) if existing else "Keine bestehende Datei."
     return f"""
 {instructions}
@@ -153,14 +203,17 @@ Bestehende Zieldaten, falls vorhanden:
 
 Arbeitsauftrag:
 - Recherchiere ausschließlich dieses exakte Modell und diese Variante.
-- Nutze Google Search Grounding.
+- Nutze ausschließlich die unten bereitgestellten Recherche-URLs als Webquellen.
 - Priorisiere offizielle Herstellerquellen.
 - Verwende nur belastbar belegte Werte.
 - Unbekannte Werte sind null.
 - Bei nicht auflösbaren Widersprüchen: status = needs_review.
 - Gib ausschließlich ein einzelnes JSON-Objekt nach dem Maschinen-Schema zurück.
 - Keine Markdown-Codeblöcke und keine Erklärung außerhalb des JSON.
-- Erfinde keine URLs.
+- Erfinde keine URLs. source.urls darf nur URLs aus der bereitgestellten Quellenliste enthalten.
+
+Recherche-URLs:
+{chr(10).join(f"- {u}" for u in research_urls)}
 """
 
 
@@ -169,12 +222,16 @@ def research_one(machine: dict[str, Any], instructions: str, model: str) -> dict
     target = ROOT / machine["data_file"]
     existing = load_json(target) if target.exists() else None
 
+    research_urls = source_urls_for(machine)
+    if not research_urls:
+        raise RuntimeError("Keine Webquellen für die Maschine gefunden.")
+
     config = types.GenerateContentConfig(
         response_mime_type="application/json",
         response_schema=generation_schema(),
         temperature=0.1,
         max_output_tokens=8192,
-        tools=[types.Tool(google_search=types.GoogleSearch())],
+        tools=[{"url_context": {}}],
     )
 
     last_error = None
@@ -182,18 +239,18 @@ def research_one(machine: dict[str, Any], instructions: str, model: str) -> dict
         try:
             response = client.models.generate_content(
                 model=model,
-                contents=build_prompt(machine, existing, instructions),
+                contents=build_prompt(machine, existing, instructions, research_urls),
                 config=config,
             )
             if not response.text:
                 raise RuntimeError("Gemini lieferte keinen Text.")
 
             data = json.loads(response.text)
-            urls = grounding_urls(response)
+            urls = grounding_urls(response) or research_urls
 
             data.setdefault("source", {})
             if urls:
-                data["source"]["urls"] = urls
+                data["source"]["urls"] = [u for u in urls if u in research_urls]
                 data["source"]["verified"] = True
                 data["source"].setdefault("type", "google_search_grounded")
             else:
