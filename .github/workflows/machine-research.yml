@@ -51,8 +51,11 @@ jobs:
       - name: Validate backlog before research
         run: python scripts/research_machines.py --validate-only
       - name: Run research workers
+        id: research
+        continue-on-error: true
         run: python scripts/research_machines.py
       - name: Commit generated machine data
+        if: always()
         run: |
           git config user.name "machine-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
