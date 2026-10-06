@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T14:26:12.140557+00:00",
+  "last_updated": "2026-10-06T19:33:57.497118+00:00",
   "incoming_queue": [],
   "machines": [
     {
@@ -44,7 +44,7 @@
       "series": "ALU-Line",
       "model": "ALU-Line 1107",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/ALU-Line_1107.json"
     },
     {
@@ -53,7 +53,7 @@
       "series": "ALU-Line",
       "model": "ALU-Line 1110",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/ALU-Line_1110.json"
     },
     {
@@ -62,7 +62,7 @@
       "series": "ALU-Line",
       "model": "ALU-Line 1510",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/ALU-Line_1510.json"
     },
     {
@@ -71,7 +71,7 @@
       "series": "Compact-Line (CL)",
       "model": "Compact-Line 0405",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Compact-Line_0405.json"
     },
     {
@@ -80,7 +80,7 @@
       "series": "Compact-Line (CL)",
       "model": "Compact-Line 0805",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Compact-Line_0805.json"
     },
     {
@@ -89,7 +89,7 @@
       "series": "Compact-Line (CL)",
       "model": "Compact-Line 1005",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Compact-Line_1005.json"
     },
     {
@@ -98,7 +98,7 @@
       "series": "Heavy-Line (HL)",
       "model": "Heavy-Line 0805",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Heavy-Line_0805.json"
     },
     {
@@ -107,7 +107,7 @@
       "series": "Heavy-Line (HL)",
       "model": "Heavy-Line 1208",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Heavy-Line_1208.json"
     },
     {
