@@ -22,7 +22,7 @@ BACKLOG_PATH = ROOT / "machines_backlog.json"
 MACHINE_SCHEMA_PATH = ROOT / "machine.schema.json"
 AGENT_PATH = ROOT / "AGENT_RESEARCHER.md"
 
-DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite")
+DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 DEFAULT_BATCH_SIZE = int(os.getenv("RESEARCH_BATCH_SIZE", "12"))
 DEFAULT_WORKERS = int(os.getenv("RESEARCH_WORKERS", "6"))
 MAX_RETRIES = 4
