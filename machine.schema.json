@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portalfr Machine",
+  "type": "object",
+  "required": [
+    "id","manufacturer","series","model","variant","revision",
+    "machine_type","axis_count","axes","workspace","spindle",
+    "mechanics","limits","homing","probe","tool_changer",
+    "controller","status","source","version"
+  ],
+  "properties": {
+    "id": {"type":"string","minLength":1},
+    "manufacturer": {
+      "type":"object",
+      "required":["id","name"],
+      "properties":{"id":{"type":"string"},"name":{"type":"string"}},
+      "additionalProperties":false
+    },
+    "series": {
+      "type":"object",
+      "required":["id","name"],
+      "properties":{"id":{"type":"string"},"name":{"type":"string"}},
+      "additionalProperties":false
+    },
+    "model": {
+      "type":"object",
+      "required":["id","name"],
+      "properties":{"id":{"type":"string"},"name":{"type":"string"}},
+      "additionalProperties":false
+    },
+    "variant": {"type":["string","null"]},
+    "revision": {"type":["string","null"]},
+    "machine_type": {"type":"string"},
+    "axis_count": {"type":["integer","null"]},
+    "axes": {
+      "type":"object",
+      "required":["X","Y","Z"],
+      "properties":{
+        "X":{"$ref":"#/$defs/axis"},
+        "Y":{"$ref":"#/$defs/axis"},
+        "Z":{"$ref":"#/$defs/axis"}
+      },
+      "additionalProperties":false
+    },
+    "workspace": {
+      "type":"object",
+      "required":["x_mm","y_mm","z_mm"],
+      "properties":{
+        "x_mm":{"type":["number","null"]},
+        "y_mm":{"type":["number","null"]},
+        "z_mm":{"type":["number","null"]}
+      },
+      "additionalProperties":false
+    },
+    "spindle": {
+      "type":"object",
+      "required":["type","power_w","min_rpm","max_rpm"],
+      "properties":{
+        "type":{"type":["string","null"]},
+        "power_w":{"type":["number","null"]},
+        "min_rpm":{"type":["number","null"]},
+        "max_rpm":{"type":["number","null"]}
+      },
+      "additionalProperties":false
+    },
+    "mechanics": {
+      "type":"object",
+      "required":["frame_material","drive_x","drive_y","drive_z","linear_guides"],
+      "properties":{
+        "frame_material":{"type":["string","null"]},
+        "drive_x":{"type":["string","null"]},
+        "drive_y":{"type":["string","null"]},
+        "drive_z":{"type":["string","null"]},
+        "linear_guides":{"type":["string","null"]}
+      },
+      "additionalProperties":false
+    },
+    "limits": {
+      "type":"object",
+      "required":["software_limits","limit_switches","hard_limits"],
+      "properties":{
+        "software_limits":{"type":["boolean","null"]},
+        "limit_switches":{"type":["boolean","null"]},
+        "hard_limits":{"type":["boolean","null"]}
+      },
+      "additionalProperties":false
+    },
+    "homing": {
+      "type":"object",
+      "required":["supported"],
+      "properties":{"supported":{"type":["boolean","null"]}},
+      "additionalProperties":false
+    },
+    "probe": {
+      "type":"object",
+      "required":["supported","workpiece_probe","tool_length_probe"],
+      "properties":{
+        "supported":{"type":["boolean","null"]},
+        "workpiece_probe":{"type":["boolean","null"]},
+        "tool_length_probe":{"type":["boolean","null"]}
+      },
+      "additionalProperties":false
+    },
+    "tool_changer": {
+      "type":"object",
+      "required":["supported","type","capacity"],
+      "properties":{
+        "supported":{"type":["boolean","null"]},
+        "type":{"type":["string","null"]},
+        "capacity":{"type":["integer","null"]}
+      },
+      "additionalProperties":false
+    },
+    "controller": {
+      "type":"object",
+      "required":["controller_profile_id"],
+      "properties":{"controller_profile_id":{"type":["string","null"]}},
+      "additionalProperties":false
+    },
+    "status": {"type":"string","enum":["certified","draft","needs_review"]},
+    "source": {
+      "type":"object",
+      "required":["type","verified","urls"],
+      "properties":{
+        "type":{"type":"string"},
+        "verified":{"type":"boolean"},
+        "urls":{"type":"array","items":{"type":"string","format":"uri"}}
+      },
+      "additionalProperties":false
+    },
+    "version": {"type":"string"}
+  },
+  "$defs": {
+    "axis": {
+      "type":"object",
+      "required":["travel_mm","max_feed_mm_min","max_acceleration_mm_s2"],
+      "properties":{
+        "travel_mm":{"type":["number","null"]},
+        "max_feed_mm_min":{"type":["number","null"]},
+        "max_acceleration_mm_s2":{"type":["number","null"]}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,1086 @@
+{
+  "last_updated": "2026-10-05",
+  "incoming_queue": [],
+  "machines": [
+    {
+      "id": "sorotec-basicline-0605",
+      "manufacturer": "Sorotec",
+      "series": "Basic-Line",
+      "model": "Basic-Line 0605",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Basic-Line_0605.json"
+    },
+    {
+      "id": "sorotec-basicline-1107",
+      "manufacturer": "Sorotec",
+      "series": "Basic-Line",
+      "model": "Basic-Line 1107",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Basic-Line_1107.json"
+    },
+    {
+      "id": "sorotec-basicline-1110",
+      "manufacturer": "Sorotec",
+      "series": "Basic-Line",
+      "model": "Basic-Line 1110",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Basic-Line_1110.json"
+    },
+    {
+      "id": "sorotec-aluline-0605",
+      "manufacturer": "Sorotec",
+      "series": "ALU-Line",
+      "model": "ALU-Line 0605",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/ALU-Line_0605.json"
+    },
+    {
+      "id": "sorotec-aluline-1107",
+      "manufacturer": "Sorotec",
+      "series": "ALU-Line",
+      "model": "ALU-Line 1107",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/ALU-Line_1107.json"
+    },
+    {
+      "id": "sorotec-aluline-1110",
+      "manufacturer": "Sorotec",
+      "series": "ALU-Line",
+      "model": "ALU-Line 1110",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/ALU-Line_1110.json"
+    },
+    {
+      "id": "sorotec-aluline-1510",
+      "manufacturer": "Sorotec",
+      "series": "ALU-Line",
+      "model": "ALU-Line 1510",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/ALU-Line_1510.json"
+    },
+    {
+      "id": "sorotec-compactline-0405",
+      "manufacturer": "Sorotec",
+      "series": "Compact-Line (CL)",
+      "model": "Compact-Line 0405",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Compact-Line_0405.json"
+    },
+    {
+      "id": "sorotec-compactline-0805",
+      "manufacturer": "Sorotec",
+      "series": "Compact-Line (CL)",
+      "model": "Compact-Line 0805",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Compact-Line_0805.json"
+    },
+    {
+      "id": "sorotec-compactline-1005",
+      "manufacturer": "Sorotec",
+      "series": "Compact-Line (CL)",
+      "model": "Compact-Line 1005",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Compact-Line_1005.json"
+    },
+    {
+      "id": "sorotec-heavyline-0805",
+      "manufacturer": "Sorotec",
+      "series": "Heavy-Line (HL)",
+      "model": "Heavy-Line 0805",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Heavy-Line_0805.json"
+    },
+    {
+      "id": "sorotec-heavyline-1208",
+      "manufacturer": "Sorotec",
+      "series": "Heavy-Line (HL)",
+      "model": "Heavy-Line 1208",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Heavy-Line_1208.json"
+    },
+    {
+      "id": "sorotec-heavyline-1212",
+      "manufacturer": "Sorotec",
+      "series": "Heavy-Line (HL)",
+      "model": "Heavy-Line 1212",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Sorotec/Heavy-Line_1212.json"
+    },
+    {
+      "id": "bzt-pf-600p",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PF-Serie",
+      "model": "PF 600-P",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PF_600-P.json"
+    },
+    {
+      "id": "bzt-pf-750p",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PF-Serie",
+      "model": "PF 750-P",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PF_750-P.json"
+    },
+    {
+      "id": "bzt-pf-1000p",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PF-Serie",
+      "model": "PF 1000-P",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PF_1000-P.json"
+    },
+    {
+      "id": "bzt-pf-1400p",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PF-Serie",
+      "model": "PF 1400-P",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PF_1400-P.json"
+    },
+    {
+      "id": "bzt-pfi-500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFI-Serie",
+      "model": "PFI 500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFI_500.json"
+    },
+    {
+      "id": "bzt-pfi-700",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFI-Serie",
+      "model": "PFI 700",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFI_700.json"
+    },
+    {
+      "id": "bzt-pfl-300",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFL-Serie",
+      "model": "PFL 300",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFL_300.json"
+    },
+    {
+      "id": "bzt-pfl-500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFL-Serie",
+      "model": "PFL 500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFL_500.json"
+    },
+    {
+      "id": "bzt-pfj-600",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFJ-Serie",
+      "model": "PFJ 600",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFJ_600.json"
+    },
+    {
+      "id": "bzt-pfj-1000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFJ-Serie",
+      "model": "PFJ 1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFJ_1000.json"
+    },
+    {
+      "id": "bzt-pfe-500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFE-Serie",
+      "model": "PFE 500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFE_500.json"
+    },
+    {
+      "id": "bzt-pfe-1000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFE-Serie",
+      "model": "PFE 1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFE_1000.json"
+    },
+    {
+      "id": "bzt-pfe-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFE-Serie",
+      "model": "PFE 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFE_1500.json"
+    },
+    {
+      "id": "bzt-pfk-0604",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFK-Serie",
+      "model": "PFK 0604",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFK_0604.json"
+    },
+    {
+      "id": "bzt-pfk-0805",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFK-Serie",
+      "model": "PFK 0805",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFK_0805.json"
+    },
+    {
+      "id": "bzt-pfu-1000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-Serie",
+      "model": "PFU 1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU_1000.json"
+    },
+    {
+      "id": "bzt-pfu-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-Serie",
+      "model": "PFU 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU_1500.json"
+    },
+    {
+      "id": "bzt-pfu-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-Serie",
+      "model": "PFU 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU_2000.json"
+    },
+    {
+      "id": "bzt-pfus-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-S-Serie",
+      "model": "PFU-S 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU-S_1500.json"
+    },
+    {
+      "id": "bzt-pfus-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-S-Serie",
+      "model": "PFU-S 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU-S_2000.json"
+    },
+    {
+      "id": "bzt-pfus-3000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-S-Serie",
+      "model": "PFU-S 3000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU-S_3000.json"
+    },
+    {
+      "id": "bzt-pfus2-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-S-2-Serie",
+      "model": "PFU-S-2 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU-S-2_1500.json"
+    },
+    {
+      "id": "bzt-pfus2-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFU-S-2-Serie",
+      "model": "PFU-S-2 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFU-S-2_2000.json"
+    },
+    {
+      "id": "bzt-pfa-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFA-Serie",
+      "model": "PFA 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFA_1500.json"
+    },
+    {
+      "id": "bzt-pfa-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFA-Serie",
+      "model": "PFA 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFA_2000.json"
+    },
+    {
+      "id": "bzt-pfh-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFH-Serie",
+      "model": "PFH 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFH_1500.json"
+    },
+    {
+      "id": "bzt-pfh-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFH-Serie",
+      "model": "PFH 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFH_2000.json"
+    },
+    {
+      "id": "bzt-pfh-3000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFH-Serie",
+      "model": "PFH 3000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFH_3000.json"
+    },
+    {
+      "id": "bzt-pfx-1000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFX-Serie",
+      "model": "PFX 1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFX_1000.json"
+    },
+    {
+      "id": "bzt-pfx-1500",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFX-Serie",
+      "model": "PFX 1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFX_1500.json"
+    },
+    {
+      "id": "bzt-pfx-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFX-Serie",
+      "model": "PFX 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFX_2000.json"
+    },
+    {
+      "id": "bzt-pfs-3000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFS-Serie",
+      "model": "PFS 3000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFS_3000.json"
+    },
+    {
+      "id": "bzt-pfs-6000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFS-Serie",
+      "model": "PFS 6000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFS_6000.json"
+    },
+    {
+      "id": "bzt-pfgs-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFG-S-Serie",
+      "model": "PFG-S 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFG-S_2000.json"
+    },
+    {
+      "id": "bzt-pfgs-3000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFG-S-Serie",
+      "model": "PFG-S 3000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFG-S_3000.json"
+    },
+    {
+      "id": "bzt-pfr-2000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFR-Serie",
+      "model": "PFR 2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFR_2000.json"
+    },
+    {
+      "id": "bzt-pfr-4000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFR-Serie",
+      "model": "PFR 4000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFR_4000.json"
+    },
+    {
+      "id": "bzt-pfb-4000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFB-Serie",
+      "model": "PFB 4000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFB_4000.json"
+    },
+    {
+      "id": "bzt-pfb-6000",
+      "manufacturer": "BZT Maschinenbau",
+      "series": "PFB-Serie",
+      "model": "PFB 6000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/BZT_Maschinenbau/PFB_6000.json"
+    },
+    {
+      "id": "cncstep-highz-s400",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-Serie",
+      "model": "High-Z S-400",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-400.json"
+    },
+    {
+      "id": "cncstep-highz-s720",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-Serie",
+      "model": "High-Z S-720",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-720.json"
+    },
+    {
+      "id": "cncstep-highz-s1000",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-Serie",
+      "model": "High-Z S-1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-1000.json"
+    },
+    {
+      "id": "cncstep-highz-s1400",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-Serie",
+      "model": "High-Z S-1400",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-1400.json"
+    },
+    {
+      "id": "cncstep-highzt-s400t",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-400/T",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-400_T.json"
+    },
+    {
+      "id": "cncstep-highzt-s720t",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-720/T",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-720_T.json"
+    },
+    {
+      "id": "cncstep-highzt-s1000t",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-1000/T",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-1000_T.json"
+    },
+    {
+      "id": "cncstep-highzt-s1400t",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-1400/T",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-1400_T.json"
+    },
+    {
+      "id": "cncstep-highzt-s1400t105",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-1400/T-105",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-1400_T-105.json"
+    },
+    {
+      "id": "cncstep-highzt-s2100t",
+      "manufacturer": "CNC-STEP",
+      "series": "High-Z S-T-Serie",
+      "model": "High-Z S-2100/T",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/High-Z_S-2100_T.json"
+    },
+    {
+      "id": "cncstep-trex-0609",
+      "manufacturer": "CNC-STEP",
+      "series": "T-Rex Serie",
+      "model": "T-Rex 0609",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/T-Rex_0609.json"
+    },
+    {
+      "id": "cncstep-trex-0712",
+      "manufacturer": "CNC-STEP",
+      "series": "T-Rex Serie",
+      "model": "T-Rex 0712",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/T-Rex_0712.json"
+    },
+    {
+      "id": "cncstep-trex-1215",
+      "manufacturer": "CNC-STEP",
+      "series": "T-Rex Serie",
+      "model": "T-Rex 1215",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/T-Rex_1215.json"
+    },
+    {
+      "id": "cncstep-trex-1520",
+      "manufacturer": "CNC-STEP",
+      "series": "T-Rex Serie",
+      "model": "T-Rex 1520",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/T-Rex_1520.json"
+    },
+    {
+      "id": "cncstep-trex-2030",
+      "manufacturer": "CNC-STEP",
+      "series": "T-Rex Serie",
+      "model": "T-Rex 2030",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/T-Rex_2030.json"
+    },
+    {
+      "id": "cncstep-raptorx-1200s15",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 1200-S15",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_1200-S15.json"
+    },
+    {
+      "id": "cncstep-raptorx-2200s15",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 2200-S15",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_2200-S15.json"
+    },
+    {
+      "id": "cncstep-raptorx-3200s15",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 3200-S15",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_3200-S15.json"
+    },
+    {
+      "id": "cncstep-raptorx-1200s20",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 1200-S20",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_1200-S20.json"
+    },
+    {
+      "id": "cncstep-raptorx-2200s20",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 2200-S20",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_2200-S20.json"
+    },
+    {
+      "id": "cncstep-raptorx-3200s20",
+      "manufacturer": "CNC-STEP",
+      "series": "RaptorX-SL Serie",
+      "model": "RaptorX-SL 3200-S20",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/RaptorX-SL_3200-S20.json"
+    },
+    {
+      "id": "cncstep-flowcnc-2015s",
+      "manufacturer": "CNC-STEP",
+      "series": "FlowCNC Serie",
+      "model": "FlowCNC 2015-S",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/CNC-STEP/FlowCNC_2015-S.json"
+    },
+    {
+      "id": "stepcraft-d-300",
+      "manufacturer": "Stepcraft",
+      "series": "D-Serie",
+      "model": "D.300",
+      "variant": "V3",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/D.300.json"
+    },
+    {
+      "id": "stepcraft-d-420",
+      "manufacturer": "Stepcraft",
+      "series": "D-Serie",
+      "model": "D.420",
+      "variant": "V3",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/D.420.json"
+    },
+    {
+      "id": "stepcraft-d-600",
+      "manufacturer": "Stepcraft",
+      "series": "D-Serie",
+      "model": "D.600",
+      "variant": "V3",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/D.600.json"
+    },
+    {
+      "id": "stepcraft-d-840",
+      "manufacturer": "Stepcraft",
+      "series": "D-Serie",
+      "model": "D.840",
+      "variant": "V3",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/D.840.json"
+    },
+    {
+      "id": "stepcraft-m-500",
+      "manufacturer": "Stepcraft",
+      "series": "M-Serie",
+      "model": "M.500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/M.500.json"
+    },
+    {
+      "id": "stepcraft-m-700",
+      "manufacturer": "Stepcraft",
+      "series": "M-Serie",
+      "model": "M.700",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/M.700.json"
+    },
+    {
+      "id": "stepcraft-m-1000",
+      "manufacturer": "Stepcraft",
+      "series": "M-Serie",
+      "model": "M.1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/M.1000.json"
+    },
+    {
+      "id": "stepcraft-q-204",
+      "manufacturer": "Stepcraft",
+      "series": "Q-Serie",
+      "model": "Q.204",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/Q.204.json"
+    },
+    {
+      "id": "stepcraft-q-404",
+      "manufacturer": "Stepcraft",
+      "series": "Q-Serie",
+      "model": "Q.404",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/Q.404.json"
+    },
+    {
+      "id": "stepcraft-q-408",
+      "manufacturer": "Stepcraft",
+      "series": "Q-Serie",
+      "model": "Q.408",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Stepcraft/Q.408.json"
+    },
+    {
+      "id": "vhf-activepro-1010",
+      "manufacturer": "vhf cam-facture",
+      "series": "Active-Pro Serie",
+      "model": "Active-Pro 1010",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/Active-Pro_1010.json"
+    },
+    {
+      "id": "vhf-activepro-1515",
+      "manufacturer": "vhf cam-facture",
+      "series": "Active-Pro Serie",
+      "model": "Active-Pro 1515",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/Active-Pro_1515.json"
+    },
+    {
+      "id": "vhf-activepro-2015",
+      "manufacturer": "vhf cam-facture",
+      "series": "Active-Pro Serie",
+      "model": "Active-Pro 2015",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/Active-Pro_2015.json"
+    },
+    {
+      "id": "vhf-x-x2015",
+      "manufacturer": "vhf cam-facture",
+      "series": "X-Serie",
+      "model": "X2015",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/X2015.json"
+    },
+    {
+      "id": "vhf-x-x3020",
+      "manufacturer": "vhf cam-facture",
+      "series": "X-Serie",
+      "model": "X3020",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/X3020.json"
+    },
+    {
+      "id": "vhf-premium-2015",
+      "manufacturer": "vhf cam-facture",
+      "series": "Premium-Serie",
+      "model": "Premium 2015",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/Premium_2015.json"
+    },
+    {
+      "id": "vhf-premium-3020",
+      "manufacturer": "vhf cam-facture",
+      "series": "Premium-Serie",
+      "model": "Premium 3020",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/vhf_cam-facture/Premium_3020.json"
+    },
+    {
+      "id": "isel-euromodul-05",
+      "manufacturer": "Isel Germany",
+      "series": "Euro-Modul Serie",
+      "model": "Euro-Modul 05",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Euro-Modul_05.json"
+    },
+    {
+      "id": "isel-euromodul-10",
+      "manufacturer": "Isel Germany",
+      "series": "Euro-Modul Serie",
+      "model": "Euro-Modul 10",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Euro-Modul_10.json"
+    },
+    {
+      "id": "isel-euromodul-15",
+      "manufacturer": "Isel Germany",
+      "series": "Euro-Modul Serie",
+      "model": "Euro-Modul 15",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Euro-Modul_15.json"
+    },
+    {
+      "id": "isel-flatcom-m20",
+      "manufacturer": "Isel Germany",
+      "series": "Flatcom Serie",
+      "model": "Flatcom M20",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Flatcom_M20.json"
+    },
+    {
+      "id": "isel-flatcom-m30",
+      "manufacturer": "Isel Germany",
+      "series": "Flatcom Serie",
+      "model": "Flatcom M30",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Flatcom_M30.json"
+    },
+    {
+      "id": "isel-flatcom-xl40",
+      "manufacturer": "Isel Germany",
+      "series": "Flatcom Serie",
+      "model": "Flatcom XL40",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/Flatcom_XL40.json"
+    },
+    {
+      "id": "isel-icp-3020",
+      "manufacturer": "Isel Germany",
+      "series": "ICP Serie",
+      "model": "ICP 3020",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/ICP_3020.json"
+    },
+    {
+      "id": "isel-icp-4030",
+      "manufacturer": "Isel Germany",
+      "series": "ICP Serie",
+      "model": "ICP 4030",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Isel_Germany/ICP_4030.json"
+    },
+    {
+      "id": "eas-y-1000",
+      "manufacturer": "EAS GmbH",
+      "series": "Y-Serie",
+      "model": "Y-1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/EAS_GmbH/Y-1000.json"
+    },
+    {
+      "id": "eas-y-1500",
+      "manufacturer": "EAS GmbH",
+      "series": "Y-Serie",
+      "model": "Y-1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/EAS_GmbH/Y-1500.json"
+    },
+    {
+      "id": "eas-y-2000",
+      "manufacturer": "EAS GmbH",
+      "series": "Y-Serie",
+      "model": "Y-2000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/EAS_GmbH/Y-2000.json"
+    },
+    {
+      "id": "eas-m-800",
+      "manufacturer": "EAS GmbH",
+      "series": "M-Serie",
+      "model": "M-800",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/EAS_GmbH/M-800.json"
+    },
+    {
+      "id": "eas-m-1200",
+      "manufacturer": "EAS GmbH",
+      "series": "M-Serie",
+      "model": "M-1200",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/EAS_GmbH/M-1200.json"
+    },
+    {
+      "id": "roykult-vf1-750",
+      "manufacturer": "RoyKult / Volksfräse",
+      "series": "Volksfräse VF1-Serie",
+      "model": "VF1-750",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/RoyKult___Volksfräse/VF1-750.json"
+    },
+    {
+      "id": "roykult-vf1-1000",
+      "manufacturer": "RoyKult / Volksfräse",
+      "series": "Volksfräse VF1-Serie",
+      "model": "VF1-1000",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/RoyKult___Volksfräse/VF1-1000.json"
+    },
+    {
+      "id": "roykult-vf1-1500",
+      "manufacturer": "RoyKult / Volksfräse",
+      "series": "Volksfräse VF1-Serie",
+      "model": "VF1-1500",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/RoyKult___Volksfräse/VF1-1500.json"
+    },
+    {
+      "id": "stepfour-x-300",
+      "manufacturer": "STEP-FOUR",
+      "series": "X-Serie",
+      "model": "X-300",
+      "variant": "Discontinued",
+      "status": "open",
+      "data_file": "maschinendaten/STEP-FOUR/X-300.json"
+    },
+    {
+      "id": "stepfour-x-500",
+      "manufacturer": "STEP-FOUR",
+      "series": "X-Serie",
+      "model": "X-500",
+      "variant": "Discontinued",
+      "status": "open",
+      "data_file": "maschinendaten/STEP-FOUR/X-500.json"
+    },
+    {
+      "id": "stepfour-basic-540",
+      "manufacturer": "STEP-FOUR",
+      "series": "Basic-Serie",
+      "model": "Basic 540",
+      "variant": "Discontinued",
+      "status": "open",
+      "data_file": "maschinendaten/STEP-FOUR/Basic_540.json"
+    },
+    {
+      "id": "stepfour-basic-840",
+      "manufacturer": "STEP-FOUR",
+      "series": "Basic-Serie",
+      "model": "Basic 840",
+      "variant": "Discontinued",
+      "status": "open",
+      "data_file": "maschinendaten/STEP-FOUR/Basic_840.json"
+    },
+    {
+      "id": "carbide3d-shapeoko4-standard",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 4",
+      "model": "Shapeoko 4 Standard",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_4_Standard.json"
+    },
+    {
+      "id": "carbide3d-shapeoko4-xl",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 4",
+      "model": "Shapeoko 4 XL",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_4_XL.json"
+    },
+    {
+      "id": "carbide3d-shapeoko4-xxl",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 4",
+      "model": "Shapeoko 4 XXL",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_4_XXL.json"
+    },
+    {
+      "id": "carbide3d-shapeokopro-standard",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko Pro",
+      "model": "Shapeoko Pro Standard",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_Pro_Standard.json"
+    },
+    {
+      "id": "carbide3d-shapeokopro-xl",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko Pro",
+      "model": "Shapeoko Pro XL",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_Pro_XL.json"
+    },
+    {
+      "id": "carbide3d-shapeokopro-xxl",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko Pro",
+      "model": "Shapeoko Pro XXL",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_Pro_XXL.json"
+    },
+    {
+      "id": "carbide3d-shapeoko5pro-2x2",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 5 Pro",
+      "model": "Shapeoko 5 Pro 2x2",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_5_Pro_2x2.json"
+    },
+    {
+      "id": "carbide3d-shapeoko5pro-4x2",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 5 Pro",
+      "model": "Shapeoko 5 Pro 4x2",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_5_Pro_4x2.json"
+    },
+    {
+      "id": "carbide3d-shapeoko5pro-4x4",
+      "manufacturer": "Carbide 3D / Shapeoko",
+      "series": "Shapeoko 5 Pro",
+      "model": "Shapeoko 5 Pro 4x4",
+      "variant": "Standard",
+      "status": "open",
+      "data_file": "maschinendaten/Carbide_3D___Shapeoko/Shapeoko_5_Pro_4x4.json"
+    }
+  ]
+}

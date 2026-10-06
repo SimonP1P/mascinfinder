@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["last_updated","incoming_queue","machines"],
+  "properties":{
+    "last_updated":{"type":"string"},
+    "incoming_queue":{"type":"array"},
+    "machines":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","manufacturer","series","model","variant","status","data_file"],
+        "properties":{
+          "id":{"type":"string"},
+          "manufacturer":{"type":"string"},
+          "series":{"type":"string"},
+          "model":{"type":"string"},
+          "variant":{"type":["string","null"]},
+          "status":{"type":"string","enum":["open","researching","completed","needs_review","failed"]},
+          "data_file":{"type":"string"}
+        },
+        "additionalProperties":false
+      }
+    }
+  },
+  "additionalProperties":false
+}
