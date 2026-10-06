@@ -74,8 +74,27 @@ def resolve_refs(schema: Any, root_schema: dict[str, Any]) -> Any:
 
 
 def generation_schema() -> dict[str, Any]:
+    """Build a Gemini-compatible output schema.
+
+    Gemini's response_schema API does not accept JSON Schema's required
+    lists in this form. We enforce all required fields locally with the
+    canonical machine.schema.json after generation instead.
+    """
     original = load_json(MACHINE_SCHEMA_PATH)
-    return resolve_refs(original, original)
+    schema = resolve_refs(original, original)
+
+    def strip_required(value: Any) -> Any:
+        if isinstance(value, list):
+            return [strip_required(item) for item in value]
+        if not isinstance(value, dict):
+            return value
+        return {
+            key: strip_required(item)
+            for key, item in value.items()
+            if key != "required"
+        }
+
+    return strip_required(schema)
 
 
 def validate_machine(data: dict[str, Any], expected: dict[str, Any]) -> list[str]:
