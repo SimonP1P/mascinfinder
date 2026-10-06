@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-05",
+  "last_updated": "2026-10-06T14:06:39.578233+00:00",
   "incoming_queue": [],
   "machines": [
     {
@@ -8,7 +8,7 @@
       "series": "Basic-Line",
       "model": "Basic-Line 0605",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Basic-Line_0605.json"
     },
     {
@@ -17,7 +17,7 @@
       "series": "Basic-Line",
       "model": "Basic-Line 1107",
       "variant": "Standard",
-      "status": "open",
+      "status": "failed",
       "data_file": "maschinendaten/Sorotec/Basic-Line_1107.json"
     },
     {
